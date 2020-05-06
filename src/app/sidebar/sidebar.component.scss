@@ -1,5 +1,57 @@
+@import '../shared/styles/colors.scss';
+
 .sidebar-wrapper {
+  background:	$orange;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
+  height: 100%;
+  img {
+    max-width: 200px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid $orange-light;
+  }
+  .pages {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; // evenly
+    span {
+      border-radius: 20%;
+      padding: 15px;
+      font-family: 'Jost', sans-serif;
+      font-size: large;
+      font-weight: 500;
+      border: 3px solid $orange-light;
+      background: $orange-darker;
+      cursor: pointer;
+      &:hover {
+        background-color: $orange-light;
+        border: 3px solid $orange-light;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .sidebar-wrapper {
+    flex-direction: column;
+    height: 100vh;
+    padding: 0 3vw;
+    .pages {
+      min-height: 40vh;
+      text-align: center;
+      justify-content: space-around;
+      align-items: center;
+      span {
+        width: 100px;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .sidebar-wrapper {
+    flex-direction: row;
+  }
 }
