@@ -1,8 +1,10 @@
 <div class="sidebar-wrapper">
-  <div class="resume">
-    Resume
+  <div class="picture" (mouseover)="changePic=true" (mouseout)="changePic=false">
+    <img *ngIf="!changePic" src="../../assets/me_1v4.jpg" class="avatar" alt="Mica Luo">
+    <img *ngIf="changePic" src="../../assets/me_2v2.jpg" class="avatar" alt="Mica Luo">
   </div>
-  <div class="interest">
-    Interest
+  <div class="pages">
+    <span>Resume</span>
+    <span>Interests</span>
   </div>
 </div>
