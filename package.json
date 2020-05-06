@@ -11,9 +11,7 @@
     "fix-lint": "ng lint --fix",
     "e2e": "ng e2e",
     "verify": "npm test && npm run build && npm run lint",
-    "compodoc": "npx compodoc -p src/tsconfig.app.json",
-    "postinstall": "ng build --aot -prod",
-    "heroku-postbuild": "ng build --prod"
+    "compodoc": "npx compodoc -p src/tsconfig.app.json"
   },
   "private": true,
   "dependencies": {
